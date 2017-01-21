@@ -1,8 +1,14 @@
 On branch master
-
-Initial commit
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   README.md
+	modified:   laststand/Library/assetDatabase3
 
 Untracked files:
-	README.md
+	laststand/Assets/
+	laststand/Library/CrashedAssetImports.txt
+	laststand/Library/metadata/81/
+	laststand/Library/metadata/b0/
+	laststand/Library/metadata/da/
 
-nothing added to commit but untracked files present
+no changes added to commit
