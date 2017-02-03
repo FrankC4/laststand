@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerScript : MonoBehaviour {
+public class TowerScript : MonoBehaviour, EnemyScript {
 
 	bool cooldown = true; // need to check whether cooldown exists or not for the towers default is true
 
@@ -52,7 +52,7 @@ public class EMPTowerScript : TowerScript {
 	}
 
 	void EMPAttack(){
-	
+		EnemyScript.setStatus ("shock");
 	}
 }
 
@@ -64,7 +64,7 @@ public class FreezeTowerScript : TowerScript {
 	}
 
 	void FreezeAttack(){
-	
+		EnemyScript.setStatus ("frozen");
 	}
 }
 

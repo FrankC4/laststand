@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
+	private float playerHealth = 100.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +12,12 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		// check if playerHealth = 0
+		if (playerHealth == 0) {
+			// gameover
+			// probably a GUI skin stating that the game is over and an options menu just to be safe
+		} else {
+			// do something
+		}
 	}
 }
