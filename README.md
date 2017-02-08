@@ -1,31 +1,6 @@
-[master 265b1a5] code scripts started and added to the project
- 31 files changed, 158 insertions(+), 2 deletions(-)
- create mode 100644 laststand/Assets/Scenes/Level1.unity
- create mode 100644 laststand/Assets/Scenes/Level1.unity.meta
- create mode 100644 laststand/Assets/Scenes/MainMenu.unity
- create mode 100644 laststand/Assets/Scenes/MainMenu.unity.meta
- create mode 100644 laststand/Assets/Scripts/EnemyScript.cs
- create mode 100644 laststand/Assets/Scripts/EnemyScript.cs.meta
- create mode 100644 laststand/Assets/Scripts/PlayerScript.cs
- create mode 100644 laststand/Assets/Scripts/PlayerScript.cs.meta
- create mode 100644 laststand/Assets/Scripts/TowerScript.cs
- create mode 100644 laststand/Assets/Scripts/TowerScript.cs.meta
- delete mode 100644 laststand/Library/CrashedAssetImports.txt
- create mode 100644 laststand/Library/LastSceneManagerSetup.txt
- create mode 100644 laststand/Library/ProjectSettings.asset
- create mode 100755 laststand/Library/ScriptAssemblies/Assembly-CSharp.dll
- create mode 100644 laststand/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
- delete mode 100644 laststand/Library/ScriptAssemblies/BuiltinAssemblies.stamp
- create mode 100644 laststand/Library/expandedItems
- create mode 100644 laststand/Library/metadata/53/5372b5f23d69f4d3e8b558a25da24862
- create mode 100644 laststand/Library/metadata/53/5372b5f23d69f4d3e8b558a25da24862.info
- create mode 100644 laststand/Library/metadata/9e/9ebc12bfd562e4a8eb7b2d295fb31580
- create mode 100644 laststand/Library/metadata/9e/9ebc12bfd562e4a8eb7b2d295fb31580.info
- create mode 100644 laststand/Library/metadata/ba/ba60ff379f3b14e2a875aecc73566f64
- create mode 100644 laststand/Library/metadata/ba/ba60ff379f3b14e2a875aecc73566f64.info
- create mode 100644 laststand/Library/metadata/dd/dd1ce8739b5c04522b2c1a730aad2cc0
- create mode 100644 laststand/Library/metadata/dd/dd1ce8739b5c04522b2c1a730aad2cc0.info
- create mode 100644 laststand/Library/metadata/e8/e8af573c843d443dba3e491f24995cfd
- create mode 100644 laststand/Library/metadata/e8/e8af573c843d443dba3e491f24995cfd.info
- delete mode 100644 laststand/Temp/ProcessJobs/e9a6970f79cd12d8b075e7d72f1b07cb.bakert
- delete mode 100644 laststand/Temp/UnityLockfile
+On branch newcoded
+Your branch is up-to-date with 'origin/newcoded'.
+Changes not staged for commit:
+	modified:   README.md
+
+no changes added to commit

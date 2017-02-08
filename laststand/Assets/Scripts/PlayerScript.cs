@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 	private float playerHealth = 100.0f;
-
+    //do you guys want to make it an integer?
 	// Use this for initialization
 	void Start () {
 		
