@@ -2,69 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerScript : MonoBehaviour, EnemyScript {
+enum Status { none, frozen, shock }
 
-	bool cooldown = true; // need to check whether cooldown exists or not for the towers default is true
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		Attack ();
-	}
-
-	void Attack (){
-		if (cooldown) {
-			// based on the cooldown length we should delay the next attack X seconds
-
-		} else {
-			
-		}
-	}
+public class TowerScript : MonoBehaviour {
+    public int damage;
+	public float reloadTime;
+    public float range;
+    Status status;
+    public EnemyScript target = null;
+    Update()
+    {
+        if (target)
+            StartCoroutine(Attack());
+    }
+    IEnumerator Attack()
+    {
+        target.TakeDamage(damage, status);
+        //TODO: instantiate the 'bullet' (it could be a laser beam or some other attack)
+        //      perhaps all towers shoot a beam instead of projectiles?
+        //      this would make it much simpler to code
+        yield return new WaitForSeconds(reloadTime);
+    }
+    //TODO: a function that changes the target to an enemy within the range
+    //TODO: a function that rotates the tower to point towards the targeted enemy
 }
-
-public class GatTowerScript : TowerScript {
-	private bool cooldown = false;
-	private int damage;
-
-	void GatTower(){
-		// initialize machine gun tower
-	}
-
-	int setDamage(){
-		// The amount of damage machine gun tower can deal out
-	}
-
-	void GatAttack (){
-		
-	}
-}
-
-public class EMPTowerScript : TowerScript {
-	private bool cooldown = true;
-
-
-	void EMPTower(){
-	
-	}
-
-	void EMPAttack(){
-		EnemyScript.setStatus ("shock");
-	}
-}
-
-public class FreezeTowerScript : TowerScript {
-	private bool cooldown = true;
-
-	void FreezeTower (){
-	
-	}
-
-	void FreezeAttack(){
-		EnemyScript.setStatus ("frozen");
-	}
-}
-
