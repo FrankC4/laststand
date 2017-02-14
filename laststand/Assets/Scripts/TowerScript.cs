@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerScript : MonoBehaviour, EnemyScript {
+public class TowerScript : EnemyScript {
 
 	bool cooldown = true; // need to check whether cooldown exists or not for the towers default is true
 

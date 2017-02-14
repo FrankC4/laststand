@@ -14,4 +14,8 @@ public class UIManagerScript : MonoBehaviour
 	{
 		SceneManager.LoadScene ("Settings");
 	}
+	public void Credits()
+	{
+		SceneManager.LoadScene ("Credits");
+	}
 }
