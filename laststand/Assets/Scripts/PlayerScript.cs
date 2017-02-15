@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour { //is this the script for just the enemy-attackable player, or for the whole UI?
 	private int health = 100;
-	void Start ()
-    {
-		
-	}
-	void Update ()
-    {
-		
-	}
     void TakeDamage(int damage)
     {
         health -= damage;

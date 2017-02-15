@@ -1,65 +1,75 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-enum Status { none, frozen, shock }
-
-struct Point { int x; int y; }
+﻿using UnityEngine;
+using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
-    List<Point> path;
-    public int damage; //how much damage the enemy deals to the player['s tower]
-	public float walkspeed; // this is affected by freezeTower
-	public Status status; // this is affected by emp and freezeTower
-    public float statusDuration; //when is this used?
-	public float health; // all enemies should start with full health
-	float timeLeft = 20.0f; // ten seconds frozen
-    public bool immune;
-	void Start ()
+    public Transform killLocation;
+    public GameObject waypoint;
+    public int damage;
+    public float maxWalkSpeed;
+    public int health;
+    float currentWalkSpeed;
+    bool shocked = false;
+    bool onFire = false;
+    void Start()
     {
-        status = none;
-	}
-	void Update ()
+        currentWalkSpeed = maxWalkSpeed;
+    }
+    void Update()
     {
-
-	}
-	public void ApplyStatus(Status s, float f) {
-        if (immune) return;
-		// this takes in whether the characters are shocked or frozen
-		switch(s)
+        Walk();
+    }
+    void Walk()
+    {
+        //TODO: move enemy
+        //TODO: rotate enemy to face the way it's walking
+    }
+    public float ETA()
+    {
+        return (gameObject.transform.position - waypoint.transform.position).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
+        // returns (the distance from this enemy to the next waypoint) added to (the Distance the next waypoint gives for itself).
+    }
+    public void TakeDamage(int damage, int effect, float effectDuration)
+    {
+        if ((health -= damage) <= 0)
+            StartCoroutine(KillSelf());
+        if (!shocked)
+            if (effect == 1)
+                StartCoroutine(Shock(effectDuration));
+        if (!onFire)
+            if (effect == 2)
+                StartCoroutine(Burn(effectDuration));
+    }
+    IEnumerator KillSelf()
+    {
+        gameObject.transform.position = killLocation.position;
+        gameObject.transform.rotation = killLocation.rotation;
+        yield return null;
+        Destroy(gameObject);
+    }
+    IEnumerator Shock(float duration)
+    {
+        shocked = true;
+        float runningTime = 0.0f;
+        while(runningTime < duration)
         {
-		case frozen:
-			Debug.Log ("Enemy status: frozen");
-			walkspeed = 0.0f;
-            statusDuration = f;
-			break;
-		case shock:
-			Debug.Log ("Enemy status: shocked");
-			walkspeed = 0.0f;
-			break;
-		}
-	}
-	private string GetStatus(){ //Why is this called 'getStatus'? it's not fetching the status, it's modifying it...
-		//the return type here is listed as 'string', but no 'return' is even called?
-
-		// we should also do like animation or something
-		// just saying but not necessary
-		if (status == frozen) {
-			timeLeft -= Time.deltaTime;
-			for (int i = 0; i <= 100; i++){
-				walkspeed += (i * 0.25f);
-				// this is used to unfreeze enemy back to normal speed
-				status = none;
-			}
-		}
-		else if (status == shock) {
-			timeLeft -= Time.deltaTime;
-			if (timeLeft == 0) {
-				walkspeed = 10.0f;
-				status = none;
-			}
-		}
-	}
-    //TODO: function that moves enemy along the path
-    //      this function should also rotate the enemy so it's facing the right way
+            currentWalkSpeed = (runningTime / duration) * maxWalkSpeed;
+            yield return null;
+            runningTime += Time.deltaTime;
+        }
+        shocked = false;
+        currentWalkSpeed = maxWalkSpeed;
+    }
+    IEnumerator Burn(float duration)
+    {
+        onFire = true;
+        float burnTime = Time.time;
+        float runningTime = 0.0f;
+        while(runningTime < duration)
+        {
+            --health;
+            yield return null;
+            runningTime += Time.deltaTime;
+        }
+        onFire = false;
+    }
 }
