@@ -10,16 +10,9 @@ public class TowerScript : MonoBehaviour {
     public float effectDuration;
     public float rotationSpeed;
     bool reloaded = false;
-    List<EnemyScript> targetEnemies = new List<EnemyScript>(); //Needed to initialize it to solve a null reference error in update.
+    List<EnemyScript> targetEnemies;
     EnemyScript target;
-
-    private void Start()
-    {
-        gameObject.GetComponent<SphereCollider>().radius = range; //Sets the radius of the collider to the range. (This is tested and works)
-    }
-
-    void Update ()
-    {
+	void Update () {
         if (targetEnemies.Count > 0)
         {
             if (target == null)
@@ -33,7 +26,6 @@ public class TowerScript : MonoBehaviour {
             }
         }
 	}
-
     void FindTarget()
     {
         float leastValue = float.MaxValue;
@@ -49,21 +41,16 @@ public class TowerScript : MonoBehaviour {
         if (leastIndex != -1)
             target = targetEnemies[leastIndex];
     }
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
-            targetEnemies.Add(other.GetComponent<EnemyScript>());
+        targetEnemies.Add(other.GetComponent<EnemyScript>());
     }
-
     void OnTriggerExit(Collider other)
     {
         //for (int i = 0; i < targetEnemies.Count; ++i)
         //    if (targetEnemies[i] == other.gameObject.GetComponent<EnemyScript>())
-        if (other.CompareTag("Enemy"))
-            targetEnemies.Remove(other.GetComponent<EnemyScript>());
+        targetEnemies.Remove(other.GetComponent<EnemyScript>());
     }
-
     IEnumerator Reload()
     {
         yield return new WaitForSeconds(reloadTime);
