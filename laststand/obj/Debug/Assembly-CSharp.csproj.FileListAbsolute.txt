@@ -24,6 +24,5 @@ C:\Users\frank\Documents\GitHub\laststand\laststand\Temp\bin\Debug\UnityEngine.P
 C:\Users\frank\Documents\GitHub\laststand\laststand\Temp\bin\Debug\UnityEngine.Analytics.xml
 C:\Users\frank\Documents\GitHub\laststand\laststand\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\frank\Documents\GitHub\laststand\laststand\Temp\bin\Debug\UnityEngine.VR.xml
-C:\Users\frank\Documents\GitHub\laststand\laststand\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\frank\Documents\GitHub\laststand\laststand\obj\Debug\Assembly-CSharp.dll
 C:\Users\frank\Documents\GitHub\laststand\laststand\obj\Debug\Assembly-CSharp.pdb
