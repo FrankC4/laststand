@@ -9,7 +9,6 @@ public class UIManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
-
 	public void Settings()
 	{
 		SceneManager.LoadScene ("Settings");
