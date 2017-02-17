@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
-    public Transform killLocation;
     public GameObject waypoint;
     public int damage;
     public float maxWalkSpeed;
@@ -10,9 +9,12 @@ public class EnemyScript : MonoBehaviour {
     float currentWalkSpeed;
     bool shocked = false;
     bool onFire = false;
+    Transform killLocation;
+
     void Start()
     {
         currentWalkSpeed = maxWalkSpeed;
+        killLocation = GameObject.FindGameObjectWithTag("Kill").GetComponent<Transform>();
     }
     void Update()
     {
