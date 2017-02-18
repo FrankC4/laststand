@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Credits.unity
+- path: C:/Users/seraa/OneDrive/Documents/laststand-newcoded/laststand/laststand/Assets/Scenes/Level1.unity
   isLoaded: 1
   isActive: 1

@@ -6,8 +6,9 @@ public class EnemyScript : MonoBehaviour {
     public int damage;
     public float maxWalkSpeed;
     public int health;
-    float currentWalkSpeed;
-    bool shocked = false;
+    public float currentWalkSpeed; //Temporarily public for testing
+    float fireDuration = 0; //External from fire so that the coroutine can be extended if the enemy is lit on fite again.
+    float shockDuration = 0;
     bool onFire = false;
     Transform killLocation;
 
@@ -34,12 +35,20 @@ public class EnemyScript : MonoBehaviour {
     {
         if ((health -= damage) <= 0)
             StartCoroutine(KillSelf());
-        if (!shocked)
-            if (effect == 1)
-                StartCoroutine(Shock(effectDuration));
-        if (!onFire)
-            if (effect == 2)
-                StartCoroutine(Burn(effectDuration));
+        if (effect == 1)
+        { 
+            StopCoroutine("Shock"); //Stop the shop if there's already one occurring.
+            if (effectDuration > shockDuration)
+                shockDuration = effectDuration;
+            StartCoroutine("Shock"); //Start the shock.
+        }
+        if (effect == 2)
+        {
+            if(effectDuration > fireDuration)
+                fireDuration = effectDuration; //Setting this extends the duration of fire if the enemy is burned again.
+            if (!onFire)
+                StartCoroutine(Burn());
+        }
     }
     IEnumerator KillSelf()
     {
@@ -48,30 +57,37 @@ public class EnemyScript : MonoBehaviour {
         yield return null;
         Destroy(gameObject);
     }
-    IEnumerator Shock(float duration)
+    IEnumerator Shock()
     {
-        shocked = true;
         float runningTime = 0.0f;
-        while(runningTime < duration)
+        while(runningTime < shockDuration)
         {
-            currentWalkSpeed = (runningTime / duration) * maxWalkSpeed;
-            yield return null;
-            runningTime += Time.deltaTime;
+            currentWalkSpeed = (runningTime / shockDuration) * maxWalkSpeed;
+            yield return new WaitForSeconds(.02f);
+            runningTime += .02f;
         }
-        shocked = false;
         currentWalkSpeed = maxWalkSpeed;
     }
-    IEnumerator Burn(float duration)
+    IEnumerator Burn()
     {
         onFire = true;
-        float burnTime = Time.time;
-        float runningTime = 0.0f;
+        //float burnTime = Time.time;
+        //float runningTime = 0.0f;
+        while (fireDuration > 0)
+        {
+            if (--health <= 0)
+                StartCoroutine(KillSelf());
+            yield return new WaitForSeconds(1.0f);
+            --fireDuration;
+        }
+        /*
         while(runningTime < duration)
         {
             --health;
             yield return null;
             runningTime += Time.deltaTime;
-        }
+        }*/
         onFire = false;
+        
     }
 }
