@@ -13,7 +13,6 @@ public class PauseGame : MonoBehaviour
 	public Animator settingsmenu;
 	public Slider volumeSlider;
 	public AudioSource volumeAudio;
-    public static bool paused;
 
 	// Update is called once per frame
 	void Update () {
@@ -29,14 +28,12 @@ public class PauseGame : MonoBehaviour
         	    {
             	canvas.gameObject.SetActive(true);
             	Time.timeScale = 0f;
-                paused = true;
 				AudioListener.volume = 0;
         		}
         		else
         		{
            	 	canvas.gameObject.SetActive(false);
             	Time.timeScale = 1f;
-                paused = false;
 				AudioListener.volume = 1;
         		}
     }

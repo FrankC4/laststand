@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
-    public GameObject waypoint;
     public int damage;
     public float maxWalkSpeed;
     public int health;
@@ -11,11 +10,13 @@ public class EnemyScript : MonoBehaviour {
     float shockDuration = 0;
     bool onFire = false;
     Transform killLocation;
+    private GameObject waypoint;
 
     void Start()
     {
         currentWalkSpeed = maxWalkSpeed;
         killLocation = GameObject.FindGameObjectWithTag("Kill").GetComponent<Transform>();
+        waypoint = GameObject.FindGameObjectWithTag("FirstWaypoint");
     }
     void Update()
     {
@@ -23,8 +24,16 @@ public class EnemyScript : MonoBehaviour {
     }
     void Walk()
     {
-        //TODO: move enemy
-        //TODO: rotate enemy to face the way it's walking
+        if ((gameObject.transform.position - waypoint.transform.position).magnitude == 0f)
+            if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
+                waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
+            else
+            {
+                //start attacking player
+            }
+        else
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
+
     }
     public float ETA()
     {
@@ -52,10 +61,13 @@ public class EnemyScript : MonoBehaviour {
     }
     IEnumerator KillSelf()
     {
-        gameObject.transform.position = killLocation.position;
-        gameObject.transform.rotation = killLocation.rotation;
-        yield return null;
-        Destroy(gameObject);
+        if (gameObject)
+        {
+            gameObject.transform.position = killLocation.position;
+            gameObject.transform.rotation = killLocation.rotation;
+            yield return null;
+            Destroy(gameObject);
+        }
     }
     IEnumerator Shock()
     {
