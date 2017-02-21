@@ -25,12 +25,14 @@ public class TowerScript : MonoBehaviour {
             if (target == null)
                 FindTarget();
             if (target)
-                gameObject.transform.rotation.SetLookRotation(Vector3.RotateTowards(gameObject.transform.forward, target.gameObject.transform.forward, rotationSpeed * Time.deltaTime, 0f));
-            if (reloaded)
             {
-                target.TakeDamage(damage, effect, effectDuration);
-                reloaded = false;
-                StartCoroutine(Reload());
+                gameObject.transform.rotation.SetLookRotation(Vector3.RotateTowards(gameObject.transform.forward, target.gameObject.transform.forward, rotationSpeed * Time.deltaTime, 0f));
+                if (reloaded)
+                {
+                    target.TakeDamage(damage, effect, effectDuration);
+                    reloaded = false;
+                    StartCoroutine(Reload());
+                }
             }
         }
 	}
@@ -63,6 +65,8 @@ public class TowerScript : MonoBehaviour {
         //    if (targetEnemies[i] == other.gameObject.GetComponent<EnemyScript>())
         if (other.CompareTag("Enemy"))
             targetEnemies.Remove(other.GetComponent<EnemyScript>());
+        if (other.GetComponent<EnemyScript>() == target)
+            target = null;
     }
 
     IEnumerator Reload()

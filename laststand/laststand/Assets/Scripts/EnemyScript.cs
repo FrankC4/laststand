@@ -6,7 +6,8 @@ public class EnemyScript : MonoBehaviour {
     public float maxWalkSpeed;
     public int health;
     public float currentWalkSpeed; //Temporarily public for testing
-    float fireDuration = 0; //External from fire so that the coroutine can be extended if the enemy is lit on fite again.
+    float shockTime;
+    float fireDuration = 0; //External from fire so that the coroutine can be extended if the enemy is lit on fire again.
     float shockDuration = 0;
     bool onFire = false;
     Transform killLocation;
@@ -40,12 +41,12 @@ public class EnemyScript : MonoBehaviour {
         return (gameObject.transform.position - waypoint.transform.position).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
         // returns (the distance from this enemy to the next waypoint) added to (the Distance the next waypoint gives for itself).
     }
-    public void TakeDamage(int damage, int effect, float effectDuration)
+    public void TakeDamage(int damage, int effect = 0, float effectDuration = 0)
     {
         if ((health -= damage) <= 0)
             StartCoroutine(KillSelf());
         if (effect == 1)
-        { 
+        {
             StopCoroutine("Shock"); //Stop the shop if there's already one occurring.
             if (effectDuration > shockDuration)
                 shockDuration = effectDuration;
@@ -75,16 +76,14 @@ public class EnemyScript : MonoBehaviour {
         while(runningTime < shockDuration)
         {
             currentWalkSpeed = (runningTime / shockDuration) * maxWalkSpeed;
-            yield return new WaitForSeconds(.02f);
-            runningTime += .02f;
+            yield return new WaitForSeconds(Time.deltaTime);
+            runningTime += Time.deltaTime;
         }
         currentWalkSpeed = maxWalkSpeed;
     }
     IEnumerator Burn()
     {
         onFire = true;
-        //float burnTime = Time.time;
-        //float runningTime = 0.0f;
         while (fireDuration > 0)
         {
             if (--health <= 0)
@@ -92,14 +91,6 @@ public class EnemyScript : MonoBehaviour {
             yield return new WaitForSeconds(1.0f);
             --fireDuration;
         }
-        /*
-        while(runningTime < duration)
-        {
-            --health;
-            yield return null;
-            runningTime += Time.deltaTime;
-        }*/
         onFire = false;
-        
     }
 }

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  maxWalkSpeed: 3
+  maxWalkSpeed: 6
   health: 6
   currentWalkSpeed: 0
 --- !u!136 &136518349261151302
