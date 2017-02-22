@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour {
+    public TowerBuildScript towerBuildScript;
     public float startTime;
     public int count;
     public float interval;
     public Transform enemy;
     public UnityEngine.UI.Text minutes;
     public UnityEngine.UI.Text seconds;
+    public int upgrade;
     private int remainingSeconds;
     private int remainingMinutes;
+
     IEnumerator Wave()
     {
         yield return new WaitForSeconds(startTime);
-        for(int i = 0; i < count; ++i) {
+        for(int i = 0; i < count; ++i)
+        {
             Instantiate(enemy);
             yield return new WaitForSeconds(interval);
         }
+        towerBuildScript.Activate(upgrade);
     }
 
     IEnumerator CountDown(float time)
@@ -30,7 +35,8 @@ public class EnemySpawnerScript : MonoBehaviour {
             minutes.text = remainingMinutes.ToString();
         else
             minutes.text = "0" + remainingMinutes.ToString();
-        for (int i = 0; i < time; ++i)
+        yield return new WaitForSeconds(time - (int)time);
+        for (int i = 0; i < (int)time; ++i)
         {
             yield return new WaitForSeconds(1);
             if (remainingSeconds > 0)
