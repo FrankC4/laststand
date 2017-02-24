@@ -26,7 +26,7 @@ public class TowerScript : MonoBehaviour {
                 FindTarget();
             if (target)
             {
-                gameObject.transform.rotation.SetLookRotation(Vector3.RotateTowards(gameObject.transform.forward, target.gameObject.transform.forward, rotationSpeed * Time.deltaTime, 0f));
+                transform.LookAt(target.transform);
                 if (reloaded)
                 {
                     target.TakeDamage(damage, effect, effectDuration);

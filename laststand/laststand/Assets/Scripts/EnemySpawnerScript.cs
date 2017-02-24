@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EnemySpawnerScript : MonoBehaviour {
     public TowerBuildScript towerBuildScript;
+    public TowerChooseScript towerChooseScript;
     public float startTime;
     public int count;
     public float interval;
     public Transform enemy;
     public UnityEngine.UI.Text minutes;
     public UnityEngine.UI.Text seconds;
-    public int upgrade;
     private int remainingSeconds;
     private int remainingMinutes;
+    int upgrade = -1;
 
     IEnumerator Wave()
     {
@@ -22,7 +23,7 @@ public class EnemySpawnerScript : MonoBehaviour {
             Instantiate(enemy);
             yield return new WaitForSeconds(interval);
         }
-        towerBuildScript.Activate(upgrade);
+        DetermineUpgrade();
     }
 
     IEnumerator CountDown(float time)
@@ -59,6 +60,7 @@ public class EnemySpawnerScript : MonoBehaviour {
             }
         }
     }
+
     void Start()
     {
         StartCoroutine(Wave());
@@ -67,4 +69,41 @@ public class EnemySpawnerScript : MonoBehaviour {
         remainingSeconds = (int)(time - (remainingMinutes * 60));
         StartCoroutine(CountDown(time));
     }
+
+    void DetermineUpgrade()
+    {
+        if (upgrade == -1)
+        {
+            towerChooseScript.enabled = true;
+            towerChooseScript.Activate();
+        }
+        else
+        {
+            float RNGesus = Random.value;
+            if (RNGesus > .2 && RNGesus <= .6)
+            {
+                ++upgrade;
+                if (upgrade == 3)
+                {
+                    upgrade = 0;
+                }
+            }
+            else if (RNGesus > .6)
+            {
+                --upgrade;
+                if (upgrade == -1)
+                {
+                    upgrade = 2;
+                }
+            }
+            towerBuildScript.enabled = true;
+            towerBuildScript.Activate(upgrade);
+        }
+    }
+
+    public void SetUPgrade(int u)
+    {
+        upgrade = u;
+    }
+
 }

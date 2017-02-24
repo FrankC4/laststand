@@ -31,7 +31,7 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
             "thick wall"//
         }
     };
-    int upgrade;
+    int upgrade = 0;
     void Update()
     {
         if (gameObject.GetComponent<Camera>().enabled)
@@ -44,10 +44,22 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
                     switch (hitInfo.transform.tag)
                     {
                         case "Node":
-                            Vector3 buildPosition = hitInfo.transform.position;
-                            Destroy(hitInfo.transform.gameObject);
-                            Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity); //this might be more complicated for walls
-                            Deactivate();
+                            if (upgrade < 2)
+                            {
+                                Vector3 buildPosition = hitInfo.transform.position;
+                                Destroy(hitInfo.transform.gameObject);
+                                Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity);
+                                Deactivate();
+                            }
+                            break;
+                        case "Wall Node":
+                            if (upgrade == 2)
+                            {
+                                Vector3 buildPosition = hitInfo.transform.position;
+                                Destroy(hitInfo.transform.gameObject);
+                                Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity);
+                                Deactivate();
+                            }
                             break;
                         case "Gatling":
                             Vector3 gatlingPosition = hitInfo.transform.position;
@@ -114,14 +126,20 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
     {
         gameObject.GetComponent<Camera>().enabled = true;
         firstPersonHUD.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         upgrade = u;
+
     }
     void Deactivate()
     {
         gameObject.GetComponent<Camera>().enabled = false;
         firstPersonHUD.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         towerDescription.SetActive(false);
+        enabled = false;
     }
+
+    
 }

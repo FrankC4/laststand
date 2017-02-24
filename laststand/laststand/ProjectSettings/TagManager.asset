@@ -12,6 +12,9 @@ TagManager:
   - Tesla
   - Wall
   - WallNode
+  - GatlingSelector
+  - TeslaSelector
+  - WallSelector
   layers:
   - Default
   - TransparentFX

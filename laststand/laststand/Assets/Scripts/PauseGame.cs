@@ -16,7 +16,7 @@ public class PauseGame : MonoBehaviour
 
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetKeyDown(KeyCode.Escape))
+	    if (Input.GetKeyUp(KeyCode.Escape))
         {
             Pause();
         }
@@ -29,15 +29,17 @@ public class PauseGame : MonoBehaviour
             	canvas.gameObject.SetActive(true);
             	Time.timeScale = 0f;
 				AudioListener.volume = 0;
+                Cursor.lockState = CursorLockMode.None;
         		}
         		else
         		{
            	 	canvas.gameObject.SetActive(false);
             	Time.timeScale = 1f;
 				AudioListener.volume = 1;
+                Cursor.lockState = CursorLockMode.Locked;
         		}
     }
-
+    
 	public void Mainmenu() 
 	{	
 		Time.timeScale = 1f;
