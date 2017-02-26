@@ -9,6 +9,7 @@ public class TowerChooseScript : MonoBehaviour {
     public GameObject teslaPanel;
     public GameObject wallPanel;
     public TowerBuildScript towerBuildScript;
+    public EnemySpawnerScript enemySpawner;
     int upgrade;
 
 
@@ -29,6 +30,7 @@ public class TowerChooseScript : MonoBehaviour {
         teslaPanel.SetActive(false);
         wallPanel.SetActive(false);
         towerBuildScript.enabled = true;
+        enemySpawner.SetUPgrade(upgrade);
         towerBuildScript.Activate(upgrade);
     }
 

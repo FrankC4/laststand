@@ -9,6 +9,7 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
     public GameObject[] walls;
     public GameObject towerDescription;
     public GameObject firstPersonHUD;
+    public GameObject nodes;
     public UnityEngine.UI.Text descriptionText;
     string[,] towerDescriptions =
     {
@@ -47,17 +48,32 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
                             if (upgrade < 2)
                             {
                                 Vector3 buildPosition = hitInfo.transform.position;
+                                if (hitInfo.transform.GetComponent<NodeScript>().wallNode1)
+                                    Destroy(hitInfo.transform.GetComponent<NodeScript>().wallNode1);
+                                if (hitInfo.transform.GetComponent<NodeScript>().wallNode2)
+                                    Destroy(hitInfo.transform.GetComponent<NodeScript>().wallNode2);
+                                if (hitInfo.transform.GetComponent<NodeScript>().wallNode3)
+                                    Destroy(hitInfo.transform.GetComponent<NodeScript>().wallNode3);
+                                if (hitInfo.transform.GetComponent<NodeScript>().wallNode4)
+                                    Destroy(hitInfo.transform.GetComponent<NodeScript>().wallNode4);
                                 Destroy(hitInfo.transform.gameObject);
                                 Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity);
                                 Deactivate();
                             }
                             break;
-                        case "Wall Node":
+                        case "WallNode":
                             if (upgrade == 2)
                             {
                                 Vector3 buildPosition = hitInfo.transform.position;
+                                if (hitInfo.transform.GetComponent<wallnodescript>().Node1)
+                                    Destroy(hitInfo.transform.GetComponent<wallnodescript>().Node1);
+                                if (hitInfo.transform.GetComponent<wallnodescript>().Node2)
+                                    Destroy(hitInfo.transform.GetComponent<wallnodescript>().Node2);
                                 Destroy(hitInfo.transform.gameObject);
-                                Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity);
+                                if (hitInfo.transform.GetComponent<wallnodescript>().isSideways)
+                                    Instantiate(baseTowers[upgrade], buildPosition, Quaternion.Euler(0f,-90f,0f));
+                                else
+                                    Instantiate(baseTowers[upgrade], buildPosition, Quaternion.identity);
                                 Deactivate();
                             }
                             break;
@@ -88,15 +104,22 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
                         case "Node":
                             if (upgrade < 2)
                             {
-                                descriptionText.text = towerDescriptions[upgrade,0];
+                                descriptionText.text = towerDescriptions[upgrade, 0];
                                 towerDescription.SetActive(true);
                                 //move 'image' to this location (if it's not already there)
                                 //make a ui element showing tower based on upgrade type
                             }
+                            else
+                                towerDescription.SetActive(false);
                             break;
                         case "WallNode":
-                            descriptionText.text = towerDescriptions[upgrade,0];
-                            towerDescription.SetActive(true);
+                            if (upgrade == 2)
+                            {
+                                descriptionText.text = towerDescriptions[upgrade, 0];
+                                towerDescription.SetActive(true);
+                            }
+                            else
+                                towerDescription.SetActive(false);
                             //for building a new wall
                             break;
                         case "Gatling":
@@ -126,6 +149,7 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
     {
         gameObject.GetComponent<Camera>().enabled = true;
         firstPersonHUD.SetActive(false);
+        nodes.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         upgrade = u;
@@ -135,6 +159,7 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
     {
         gameObject.GetComponent<Camera>().enabled = false;
         firstPersonHUD.SetActive(true);
+        nodes.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
         towerDescription.SetActive(false);

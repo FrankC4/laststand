@@ -8,7 +8,6 @@ public class TowerScript : MonoBehaviour {
     public float range;
     public int effect; //0 => none, 1 => shock, 2 => fire
     public float effectDuration;
-    public float rotationSpeed;
     bool reloaded = true;
     List<EnemyScript> targetEnemies = new List<EnemyScript>(); //Needed to initialize it to solve a null reference error in update.
     EnemyScript target;

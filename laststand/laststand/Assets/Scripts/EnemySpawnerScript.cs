@@ -20,9 +20,11 @@ public class EnemySpawnerScript : MonoBehaviour {
         yield return new WaitForSeconds(startTime);
         for(int i = 0; i < count; ++i)
         {
-            Instantiate(enemy);
+            Instantiate(enemy, transform.position, transform.rotation, transform);
             yield return new WaitForSeconds(interval);
         }
+        while (gameObject.transform.childCount > 0)
+            yield return new WaitForSeconds(Time.deltaTime);
         DetermineUpgrade();
     }
 
@@ -63,11 +65,13 @@ public class EnemySpawnerScript : MonoBehaviour {
 
     void Start()
     {
+
         StartCoroutine(Wave());
         float time = (interval * count) + startTime;
         remainingMinutes = (int)time / 60;
         remainingSeconds = (int)(time - (remainingMinutes * 60));
         StartCoroutine(CountDown(time));
+        DetermineUpgrade();
     }
 
     void DetermineUpgrade()

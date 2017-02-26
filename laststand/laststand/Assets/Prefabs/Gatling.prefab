@@ -120,7 +120,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6c949e4274555ac4f86d2631195689ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,7 +151,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6c949e4274555ac4f86d2631195689ca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,10 +258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   reloadTime: 0.5
-  range: 5
+  range: 3
   effect: 0
   effectDuration: 0
-  rotationSpeed: 10
 --- !u!135 &135034900349813614
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
     public int damage;
+    public float reloadTime;
     public float maxWalkSpeed;
     public int health;
     public float currentWalkSpeed; //Temporarily public for testing
@@ -10,7 +11,10 @@ public class EnemyScript : MonoBehaviour {
     float fireDuration = 0; //External from fire so that the coroutine can be extended if the enemy is lit on fire again.
     float shockDuration = 0;
     bool onFire = false;
+    bool walled = false;
+
     Transform killLocation;
+    GameObject target;
     private GameObject waypoint;
 
     void Start()
@@ -25,15 +29,16 @@ public class EnemyScript : MonoBehaviour {
     }
     void Walk()
     {
-        if ((gameObject.transform.position - waypoint.transform.position).magnitude == 0f)
-            if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
-                waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
+        if (!walled)
+            if ((gameObject.transform.position - waypoint.transform.position).magnitude == 0f)
+                if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
+                    waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
+                else
+                {
+                    //start attacking player
+                }
             else
-            {
-                //start attacking player
-            }
-        else
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
 
     }
     public float ETA()
@@ -58,6 +63,14 @@ public class EnemyScript : MonoBehaviour {
                 fireDuration = effectDuration; //Setting this extends the duration of fire if the enemy is burned again.
             if (!onFire)
                 StartCoroutine(Burn());
+        }
+    }
+    IEnumerator Attack()
+    {
+        while(walled)
+        {
+            TakeDamage(target.GetComponent<WallScript>().WallDamage(damage));
+            yield return new WaitForSeconds(reloadTime);
         }
     }
     IEnumerator KillSelf()
@@ -92,5 +105,26 @@ public class EnemyScript : MonoBehaviour {
             --fireDuration;
         }
         onFire = false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Wall"))
+        {
+            walled = true;
+            target = other.transform.parent.gameObject;
+            StartCoroutine(Attack());
+        }
+        if (other.CompareTag("Player"))
+        {
+            walled = true;
+            //Stop and attack the player.
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Wall"))
+        {
+            walled = false;
+        }  
     }
 }
