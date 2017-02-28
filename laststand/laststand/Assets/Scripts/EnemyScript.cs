@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour {
     float shockDuration = 0;
     bool onFire = false;
     bool walled = false;
+    bool atDestination = false;
 
     Transform killLocation;
     GameObject target;
@@ -29,16 +30,17 @@ public class EnemyScript : MonoBehaviour {
     }
     void Walk()
     {
-        if (!walled)
+        if (!walled && !atDestination)
+        {
             if ((gameObject.transform.position - waypoint.transform.position).magnitude == 0f)
+            {
                 if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
                     waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
-                else
-                {
-                    //start attacking player
-                }
+            }
             else
                 gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
+            
+        }
 
     }
     public float ETA()
@@ -69,7 +71,13 @@ public class EnemyScript : MonoBehaviour {
     {
         while(walled)
         {
-            TakeDamage(target.GetComponent<WallScript>().WallDamage(damage));
+            TakeDamage((target.GetComponent<WallScript>().WallDamage(damage) > 0) ? (int)(0.5 * damage) : 0);
+            yield return new WaitForSeconds(reloadTime);
+        }
+
+        while(atDestination)
+        {
+            target.GetComponent<FirstPersonScript>().TakeDamage(damage);
             yield return new WaitForSeconds(reloadTime);
         }
     }
@@ -114,10 +122,11 @@ public class EnemyScript : MonoBehaviour {
             target = other.transform.parent.gameObject;
             StartCoroutine(Attack());
         }
-        if (other.CompareTag("Player"))
+        if (other.transform.CompareTag("Player"))
         {
-            walled = true;
-            //Stop and attack the player.
+            atDestination = true;
+            target = other.transform.GetChild(0).gameObject;
+            StartCoroutine(Attack());
         }
     }
     private void OnTriggerExit(Collider other)

@@ -90,9 +90,10 @@ public class TowerBuildScript : MonoBehaviour { //this script should be attached
                             Deactivate();
                             break;
                         case "Wall":
-                            Vector3 wallPosition = hitInfo.transform.position;
-                            Destroy(hitInfo.transform.gameObject);
-                            Instantiate(walls[upgrade], wallPosition, Quaternion.identity); //this might be more complicated
+                            Vector3 wallPosition = hitInfo.transform.parent.position;
+                            Quaternion wallRotation = hitInfo.transform.rotation;
+                            Destroy(hitInfo.transform.parent.gameObject);
+                            Instantiate(walls[upgrade], wallPosition, wallRotation); //this might be more complicated
                             Deactivate();
                             break;
                     }

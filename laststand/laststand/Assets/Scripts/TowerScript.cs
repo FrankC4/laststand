@@ -6,11 +6,12 @@ public class TowerScript : MonoBehaviour {
     public int damage;
     public float reloadTime;
     public float range;
-    public int effect; //0 => none, 1 => shock, 2 => fire
+    public int effect; //0 => none, 1 => shock, 2 => fire, 3 => missile
     public float effectDuration;
     bool reloaded = true;
     List<EnemyScript> targetEnemies = new List<EnemyScript>(); //Needed to initialize it to solve a null reference error in update.
     EnemyScript target;
+    public GameObject projectile;
 
     private void Start()
     {
@@ -28,7 +29,9 @@ public class TowerScript : MonoBehaviour {
                 transform.LookAt(target.transform);
                 if (reloaded)
                 {
-                    target.TakeDamage(damage, effect, effectDuration);
+                    target.TakeDamage(damage, (effect < 3) ? effect : 0, effectDuration);
+                    if (effect > 2)
+                        Instantiate(projectile, target.transform.position, Quaternion.identity);
                     reloaded = false;
                     StartCoroutine(Reload());
                 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WallScript : TowerScript {
-    int health;
+    protected int health;
     void Start()
     {
         health = damage;
@@ -12,7 +12,7 @@ public class WallScript : TowerScript {
     {
 
     }
-    IEnumerator Regenerate()
+    protected IEnumerator Regenerate()
     {
         transform.GetChild(0).transform.position = new Vector3(0, -50, 0);
         yield return new WaitForSeconds(reloadTime);
@@ -23,6 +23,6 @@ public class WallScript : TowerScript {
     {
         if ((health -= d) <= 0)
             StartCoroutine(Regenerate());
-        return 0;
+        return effect;
     }
 }
