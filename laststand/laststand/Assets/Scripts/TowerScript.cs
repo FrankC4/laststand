@@ -13,7 +13,7 @@ public class TowerScript : MonoBehaviour {
     EnemyScript target;
     public GameObject projectile;
 
-    void Start()
+    private void Start()
     {
         gameObject.GetComponent<SphereCollider>().radius = range; //Sets the radius of the collider to the range. (This is tested and works)
     }
