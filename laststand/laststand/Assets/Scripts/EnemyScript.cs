@@ -13,6 +13,7 @@ public class EnemyScript : MonoBehaviour {
     bool onFire = false;
     bool walled = false;
     bool atDestination = false;
+    Vector3 entropy;
 
     Transform killLocation;
     GameObject target;
@@ -20,32 +21,31 @@ public class EnemyScript : MonoBehaviour {
 
     void Start()
     {
+        entropy.x = Random.value / 5;
+        entropy.y = 0;
+        entropy.z = Random.value / 5;
         currentWalkSpeed = maxWalkSpeed;
         killLocation = GameObject.FindGameObjectWithTag("Kill").GetComponent<Transform>();
         waypoint = GameObject.FindGameObjectWithTag("FirstWaypoint");
     }
     void Update()
     {
-        Walk();
-    }
-    void Walk()
-    {
         if (!walled && !atDestination)
         {
-            if ((gameObject.transform.position - waypoint.transform.position).magnitude == 0f)
+            if ((gameObject.transform.position - waypoint.transform.position + entropy).magnitude == 0f)
             {
                 if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
                     waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
             }
             else
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position + entropy, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
             
         }
 
     }
     public float ETA()
     {
-        return (gameObject.transform.position - waypoint.transform.position).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
+        return (gameObject.transform.position - waypoint.transform.position + entropy).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
         // returns (the distance from this enemy to the next waypoint) added to (the Distance the next waypoint gives for itself).
     }
     public void TakeDamage(int damage, int effect = 0, float effectDuration = 0)

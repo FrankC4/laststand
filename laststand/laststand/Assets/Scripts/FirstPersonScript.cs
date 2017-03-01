@@ -31,7 +31,7 @@ public class FirstPersonScript : MonoBehaviour { //this script should be attache
             StartCoroutine(Reload());
             if (Physics.Raycast(transform.position,transform.forward, out hitInfo))
                 if (hitInfo.transform.CompareTag("Enemy"))
-                    hitInfo.transform.GetComponent<EnemyScript>().TakeDamage(5);
+                    hitInfo.transform.GetComponent<EnemyScript>().TakeDamage(20);
         }
     }
 
