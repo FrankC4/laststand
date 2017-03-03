@@ -108,11 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339abd911a6e01d44a6f45bcb6b246f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 3
   reloadTime: 3
   maxWalkSpeed: 4
-  health: 6
+  health: 40
   currentWalkSpeed: 0
+  remainingEnemiesVal: {fileID: 0}
+  waypoint: {fileID: 0}
 --- !u!136 &136518349261151302
 CapsuleCollider:
   m_ObjectHideFlags: 1

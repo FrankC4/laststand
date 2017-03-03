@@ -256,11 +256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1ce8739b5c04522b2c1a730aad2cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  reloadTime: 1
+  damage: 8
+  reloadTime: 0.5
   range: 3
   effect: 2
-  effectDuration: 2
+  effectDuration: 3
   projectile: {fileID: 0}
 --- !u!135 &135632539304166620
 SphereCollider:

@@ -39,8 +39,8 @@ public class PauseGame : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
         		}
     }
-    
-	public void Mainmenu() 
+
+    public void Mainmenu() 
 	{	
 		Time.timeScale = 1f;
 		SceneManager.LoadScene("MainMenu");
@@ -86,4 +86,9 @@ public class PauseGame : MonoBehaviour
 	{
 		volumeAudio.volume = volumeSlider.value;
 	}
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

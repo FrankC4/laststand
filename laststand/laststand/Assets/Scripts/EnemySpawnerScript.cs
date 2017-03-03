@@ -5,19 +5,28 @@ using UnityEngine;
 public class EnemySpawnerScript : MonoBehaviour {
     public TowerBuildScript towerBuildScript;
     public TowerChooseScript towerChooseScript;
+    public GameObject victoryMenuCanvas;
     public float startTime;
     public int count;
     public float interval;
     public Transform enemy;
+    public UnityEngine.UI.Text timerName;
     public UnityEngine.UI.Text minutes;
     public UnityEngine.UI.Text seconds;
+    public UnityEngine.UI.Text waveNumberTxt;
+    public UnityEngine.UI.Text enemyNumber;
+    private int waveNumber = 0;
     private int remainingSeconds;
     private int remainingMinutes;
     int upgrade = -1;
 
     IEnumerator Wave()
     {
+        timerName.text = "Wave Start";
         yield return new WaitForSeconds(startTime);
+        timerName.text = "Last Enemy";
+        ++waveNumber;
+        waveNumberTxt.text = waveNumber.ToString();
         for(int i = 0; i < count; ++i)
         {
             Instantiate(enemy, transform.position, transform.rotation, transform);
@@ -26,10 +35,75 @@ public class EnemySpawnerScript : MonoBehaviour {
         while (gameObject.transform.childCount > 0)
             yield return new WaitForSeconds(Time.deltaTime);
         DetermineUpgrade();
+        if (waveNumber < 4)
+        {
+            count += 2;
+            interval -= .1f;
+            StartCoroutine(Wave());
+            StartCoroutine(CountDown());
+        }
+        else
+            StartCoroutine(FinalWave());
     }
 
-    IEnumerator CountDown(float time)
+
+    IEnumerator FinalWave()
     {
+        timerName.text = "Wave Start";
+        count = 12;
+        interval = .5f;
+        StartCoroutine(CountDown());
+        yield return new WaitForSeconds(startTime);
+        timerName.text = "Last Enemy";
+        waveNumberTxt.text = "Final";
+        for (int i = 0; i < count; ++i)
+        {
+            Instantiate(enemy, transform.position, transform.rotation, transform);
+            yield return new WaitForSeconds(interval);
+        }
+        while (gameObject.transform.childCount > 0)
+            yield return new WaitForSeconds(Time.deltaTime);
+        yield return new WaitForSeconds(.5f);
+        Victory();
+    }
+
+    IEnumerator CountDown()
+    {
+        remainingMinutes = (int)(startTime / 60);
+        remainingSeconds = (int)(startTime - (remainingMinutes * 60));
+        if (remainingSeconds > 9)
+            seconds.text = remainingSeconds.ToString();
+        else
+            seconds.text = "0" + remainingSeconds.ToString();
+        if (remainingMinutes > 9)
+            minutes.text = remainingMinutes.ToString();
+        else
+            minutes.text = "0" + remainingMinutes.ToString();
+        for (int i = 0; i < (int)startTime; ++i)
+        {
+            yield return new WaitForSeconds(1);
+            if (remainingSeconds > 0)
+            {
+                --remainingSeconds;
+                if (remainingSeconds > 9)
+                    seconds.text = remainingSeconds.ToString();
+                else
+                    seconds.text = "0" + remainingSeconds.ToString();
+            }
+            else
+            {
+                --remainingMinutes;
+                remainingSeconds = 59;
+                if (remainingMinutes > 9)
+                    minutes.text = remainingMinutes.ToString();
+                else
+                    minutes.text = "0" + remainingMinutes.ToString();
+                seconds.text = "59";
+            }
+        }
+        float time = (interval * count);
+        remainingMinutes = (int)(time / 60);
+        remainingSeconds = (int)(time - (remainingMinutes * 60));
         if (remainingSeconds > 9)
             seconds.text = remainingSeconds.ToString();
         else
@@ -65,12 +139,8 @@ public class EnemySpawnerScript : MonoBehaviour {
 
     void Start()
     {
-
         StartCoroutine(Wave());
-        float time = (interval * count) + startTime;
-        remainingMinutes = (int)time / 60;
-        remainingSeconds = (int)(time - (remainingMinutes * 60));
-        StartCoroutine(CountDown(time));
+        StartCoroutine(CountDown());
         DetermineUpgrade();
     }
 
@@ -110,4 +180,11 @@ public class EnemySpawnerScript : MonoBehaviour {
         upgrade = u;
     }
 
+    void Victory()
+    {
+        victoryMenuCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+        AudioListener.volume = 0;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }

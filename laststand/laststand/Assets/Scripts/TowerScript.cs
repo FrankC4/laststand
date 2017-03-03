@@ -24,18 +24,19 @@ public class TowerScript : MonoBehaviour {
         {
             if (target == null)
                 FindTarget();
-            if (target)
-            {
-                transform.LookAt(target.transform);
-                if (reloaded)
+            if(target)
+                if (target.transform.position.y > 0)
                 {
-                    target.TakeDamage(damage, (effect < 3) ? effect : 0, effectDuration);
-                    if (effect > 2)
-                        Instantiate(projectile, target.transform.position, Quaternion.identity);
-                    reloaded = false;
-                    StartCoroutine(Reload());
+                    transform.LookAt(target.transform);
+                    if (reloaded)
+                    {
+                        target.TakeDamage(damage, (effect < 3) ? effect : 0, effectDuration);
+                        if (effect > 2)
+                            Instantiate(projectile, target.transform.position, Quaternion.identity);
+                        reloaded = false;
+                        StartCoroutine(Reload());
+                    }
                 }
-            }
         }
 	}
 
