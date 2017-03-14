@@ -10,6 +10,8 @@ public class FirstPersonScript : MonoBehaviour { //this script should be attache
     public float horizontalSpeed = 10.0F;
     public float verticalSpeed = 10.0F;
     public GameObject gameOverCanvas;
+    public GameObject reticle;
+    public GameObject reloadReticle;
     private int health = 100;
 
     private void Start()
@@ -42,9 +44,13 @@ public class FirstPersonScript : MonoBehaviour { //this script should be attache
     IEnumerator Reload()
     {
         reloaded = false;
+        reloadReticle.SetActive(true);
+        reticle.SetActive(false);
         yield return new WaitForSeconds(reloadTime);
         AmmoVal.text = "1";
         reloaded = true;
+        reloadReticle.SetActive(false);
+        reticle.SetActive(true);
     }
 
     public void TakeDamage(int damage)

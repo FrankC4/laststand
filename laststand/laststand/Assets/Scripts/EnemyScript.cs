@@ -19,13 +19,13 @@ public class EnemyScript : MonoBehaviour {
     Transform killLocation;
     GameObject target;
     public GameObject waypoint;
-    //Vector3 entropy;
+    Vector3 entropy;
 
     void Start()
     {
-        //entropy.x = (Random.value / 5);
-        //entropy.y = 0f;
-        //entropy.z = (Random.value / 5);
+        entropy.x = (Random.value - 0.5f);
+        entropy.y = 0f;
+        entropy.z = (Random.value -0.5f);
         currentWalkSpeed = maxWalkSpeed;
         killLocation = GameObject.FindGameObjectWithTag("Kill").GetComponent<Transform>();
         waypoint = GameObject.FindGameObjectWithTag("FirstWaypoint");
@@ -38,20 +38,20 @@ public class EnemyScript : MonoBehaviour {
     {
         if (!walled && !atDestination)
         {
-            if ((gameObject.transform.position - (waypoint.transform.position /*+ entropy*/)).magnitude < 0.1f)
+            if ((gameObject.transform.position - (waypoint.transform.position + entropy)).magnitude < 0.1f)
             {
                 if (waypoint.GetComponent<WaypointScript>().Distance() != 0)
                     waypoint = waypoint.GetComponent<WaypointScript>().nextWaypoint;
             }
             else
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position /* + entropy*/, waypoint.transform.position, Time.deltaTime * currentWalkSpeed);
+                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position + entropy, Time.deltaTime * currentWalkSpeed);
             
         }
 
     }
     public float ETA()
     {
-        return (gameObject.transform.position - (waypoint.transform.position /*+ entropy*/)).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
+        return (gameObject.transform.position - (waypoint.transform.position + entropy)).magnitude + waypoint.GetComponent<WaypointScript>().Distance();
         // returns (the distance from this enemy to the next waypoint) added to (the Distance the next waypoint gives for itself).
     }
     public void TakeDamage(int damage, int effect = 0, float effectDuration = 0)

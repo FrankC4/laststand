@@ -17,32 +17,1058 @@ Platform assembly: C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststan
 Loading C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststand\laststand\LastStandPrototype_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststand\laststand\LastStandPrototype_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
 Loading C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststand\laststand\LastStandPrototype_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.100 seconds
+- Completed reload, in  0.029 seconds
 Platform assembly: C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststand\laststand\LastStandPrototype_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\seraa\OneDrive\Documents\laststand-newcoded\laststand\laststand\LastStandPrototype_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.255011 ms
+UnloadTime: 2.751998 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2540 -> priority: 1 
-  Thread -> id: 2500 -> priority: 1 
+  Thread -> id: bc -> priority: 1 
+  Thread -> id: 1b58 -> priority: 1 
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseGame.VolumeController () [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall.Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_normalizedValue (Single value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.UpdateDrag (UnityEngine.EventSystems.PointerEventData eventData, UnityEngine.Camera cam) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.OnDrag (UnityEngine.EventSystems.PointerEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (IDragHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <filename unknown>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[IDragHandler] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.EventFunction`1 functor) [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.PointerInputModule:ProcessDrag(PointerEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 15.114660 ms
+UnloadTime: 5.006220 ms
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1784.
-Total: 2.046023 ms (FindLiveObjects: 0.186469 ms CreateObjectMapping: 0.137876 ms MarkObjects: 1.249579 ms  DeleteObjects: 0.467752 ms)
+Total: 0.681876 ms (FindLiveObjects: 0.075061 ms CreateObjectMapping: 0.038320 ms MarkObjects: 0.431802 ms  DeleteObjects: 0.135111 ms)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.277430 ms
+UnloadTime: 0.968690 ms
 
 Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1785.
-Total: 2.016394 ms (FindLiveObjects: 0.287604 ms CreateObjectMapping: 0.171061 ms MarkObjects: 1.534419 ms  DeleteObjects: 0.019753 ms)
+Total: 0.741135 ms (FindLiveObjects: 0.130765 ms CreateObjectMapping: 0.055308 ms MarkObjects: 0.549135 ms  DeleteObjects: 0.004740 ms)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.191702 ms
+UnloadTime: 1.223110 ms
 
 Unloading 274 unused Assets to reduce memory usage. Loaded Objects now: 405.
-Total: 1.785283 ms (FindLiveObjects: 0.093629 ms CreateObjectMapping: 0.093629 ms MarkObjects: 0.688987 ms  DeleteObjects: 0.906666 ms)
+Total: 0.518320 ms (FindLiveObjects: 0.031604 ms CreateObjectMapping: 0.023308 ms MarkObjects: 0.204641 ms  DeleteObjects: 0.258370 ms)
 
